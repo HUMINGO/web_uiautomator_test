@@ -1,0 +1,41 @@
+# 内网测试环境
+mysql2:
+  host:
+    192.168.0.211
+  user:
+    root
+  password:
+    ytty@123
+  db:
+    physical_v_1.0
+  charset:
+    utf8
+
+# 华为云测试环境
+mysql:
+  host:
+    124.70.132.95
+  user:
+    beta
+  password:
+    BUkT85LA%zw0iYt#
+  db:
+    physical_beta_v1_0
+  charset:
+    utf8
+
+url:
+  http://admin.physical.one-sports.net/login
+
+#url:
+#  http://121.37.190.62:9200/login
+
+# 登陆账号
+login:
+  username:
+    admin
+  password:
+    admin
+
+pic_dir_name:
+  /Screenshots/
