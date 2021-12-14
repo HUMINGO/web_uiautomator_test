@@ -6,19 +6,20 @@ from common.driver_common import DriverCommon
 from common.handle_yaml import handleYaml
 from common.log import logging
 from common.screenshot import Screen, set_file_path
-from common.util import sleep
+from common.util import *
 
 log_file_path = os.path.join(os.path.abspath(".."), "logs/mylog.txt")  # 日志文件的路径
+file_path = os.path.join(os.path.abspath(".."), "Screenshots")
 
 
 class School(unittest.TestCase):
-
     driver = DriverCommon("Chrome")
 
     @classmethod
     def setUpClass(cls) -> None:
         logging.info("------------开始测试学校模块----------------")
         open(log_file_path, "w").close()  # 清空日志文件
+        del_file(file_path)
 
     def setUp(self) -> None:
         """
@@ -58,18 +59,12 @@ class School(unittest.TestCase):
         except Exception as e:
             logging.info("创建学校失败，原因是{}".format(e))
 
-
-
-
-
-
     def tearDown(self) -> None:
         self.driver.close()
 
     @classmethod
     def tearDownClass(cls) -> None:
         logging.info("--------------学校模块测试结束-----------------")
-
 
 
 if __name__ == "__main__":
