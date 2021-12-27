@@ -23,10 +23,11 @@ mysql:
     physical_beta_v1_0
   charset:
     utf8
-
+# 生产环境地址
 url:
   http://admin.physical.one-sports.net/login
 
+# 华为云测试环境地址
 #url:
 #  http://121.37.190.62:9200/login
 

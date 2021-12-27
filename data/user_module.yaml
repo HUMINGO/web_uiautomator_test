@@ -1,0 +1,30 @@
+# 用户模块
+
+# -----------------------用户列表页面--------------------------
+
+data:
+  user_input:
+    胡一刀
+
+user_list_page:
+  # 用户输入框
+  user_input:
+    xpath:
+      //*[@id="userNameOrUserMobileOrUserId"]
+  # 搜索按钮
+  search_button:
+    xpath:
+      //*[@id="app"]/section/section/main/div/div[1]/div/div/form/div[3]/div/div/div/button[2]
+  reset_button:
+    xpath:
+      //*[@id="app"]/section/section/main/div/div[1]/div/div/form/div[3]/div/div/div/button[1]
+  check_detail:
+    xpath:
+      //*[@id="app"]/section/section/main/div/div[2]/div/div/div/div/div/div/div[2]/table/tbody/tr[1]/td[9]/button
+  user_type:
+    xpath:
+      //*[@id="userRole"]
+    ordinary_user:
+      xpath:
+        /html/body/div[13]/div/div/div/div[2]/div[1]/div/div/div[1]/div
+

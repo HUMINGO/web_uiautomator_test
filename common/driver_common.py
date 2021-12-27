@@ -145,6 +145,22 @@ class DriverCommon:
         e1.clear()
         e1.send_keys(text)
 
+    def input_search(self, input_fangfa, input_dingwei, text, button_fangfa, button_dingwei):
+        """
+        输入框搜索
+        :param input_fangfa: 输入框定位方式
+        :param input_dingwei: 输入框中传入的定位值
+        :param text: 输入文本
+        :param button_fangfa: 搜索按钮的定位方式
+        :param button_dingwei: 搜索按钮的定位值
+        :return:
+        """
+        self.wait_element_appear(input_fangfa, input_dingwei)
+        e1 = self.get_element(input_fangfa, input_dingwei)
+        e1.clear()
+        e1.send_keys(text)
+        self.single_click(button_fangfa, button_dingwei)
+
     def clear(self, fangfa, dingwei):
         """
         清空输入框中的值
@@ -295,7 +311,7 @@ class DriverCommon:
         :return:
         """
         self.wait_element_appear(fangfa, dingwei)
-        e1 = self.element(fangfa, dingwei)
+        e1 = self.get_element(fangfa, dingwei)
         return e1.is_displayed()
 
     def get_title(self):
@@ -346,5 +362,5 @@ class DriverCommon:
         :return:
         """
         self.wait_element_appear(fangfa, dingwei)
-        if1 = self.element(fangfa, dingwei)
+        if1 = self.get_element(fangfa, dingwei)
         self.driver.switch_to.frame(if1)

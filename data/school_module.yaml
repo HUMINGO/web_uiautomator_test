@@ -1,0 +1,71 @@
+# 学校模块
+
+# -------------------学校列表页面-------------------------
+
+school_manage:
+  xpath:
+    //*[@id='app']/section/aside/div/ul/li[3]/div/span[2]
+  # 侧边栏
+  sidebar:
+    school_list:
+      xpath:
+        //*[@id='sub_menu_2_$$_school/schoolList-popup']/li[1]
+    teacher_list:
+      xpath:
+        //*[@id="sub_menu_2_$$_school/schoolList-popup"]/li[2]
+    student_list:
+      xpath:
+        //*[@id="sub_menu_2_$$_school/schoolList-popup"]/li[3]
+    teacher_apply_list:
+      xpath:
+        //*[@id="sub_menu_2_$$_school/schoolList-popup"]/li[4]
+    student_apply_list:
+      xpath:
+        //*[@id="sub_menu_2_$$_school/schoolList-popup"]/li[5]
+  # 学校列表
+  school_list:
+    first_page:
+      # 学校名称输入框
+      input_school_name:
+        xpath:
+          //*[@id="schoolName"]
+        id:
+          schoolName
+      #  搜索按钮
+      search_button:
+        xpath:
+          //*[@id="app"]/section/section/main/div/div[1]/div/div[1]/form/div[3]/div/div/div/button[2]
+      # 重置按钮
+      reset_button:
+        xpath:
+          //*[@id="app"]/section/section/main/div/div[1]/div/div[1]/form/div[3]/div/div/div/button[1]
+      # 学校类型下拉框
+      select_box:
+        xpath:
+          //*[@id="schoolType"]
+        # 小学
+        primary_school:
+          xpath:
+            /html/body/div[13]/div/div/div/div[2]/div[1]/div/div/div[1]/div
+    # 创建学校页面
+    creat_school_page:
+      cancel_button:
+        xpath:
+          //*[@id="app"]/section/section/main/div/div/form/div[6]/div/div/div/div/button[1]
+
+  # 教师审批列表
+  teacher_apply_list:
+    first_page:
+      input_teacher_name:
+        xpath:
+          //*[@id="reviewTeacher"]
+        id:
+          reviewTeacher
+      search_button:
+        xpath:
+          //*[@id="app"]/section/section/main/div/div[1]/div/div/form/div[3]/div/div/div/button[2]
+
+
+data:
+  teacher_input:
+    王小小
