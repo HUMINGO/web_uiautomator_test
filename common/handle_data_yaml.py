@@ -2,8 +2,7 @@
 
 import os
 import yaml
-
-# filename = os.path.join(os.path.abspath('..'), "casedata", 'api_case.yaml').replace("\\", "/")
+from yaml import Loader
 
 
 class HandleYaml:
@@ -14,8 +13,8 @@ class HandleYaml:
     def __init__(self, file_path):
         self.file_path = file_path
         self.all_data = None
-        with open(self.file_path, encoding="utf-8") as f:
-            self.all_data = yaml.load(f.read())
+        stream = open(self.file_path, mode="r", encoding="utf-8")
+        self.all_data = yaml.load(stream, Loader)
 
     def get_data(self, section):
         """
@@ -29,6 +28,6 @@ class HandleYaml:
 if __name__ == '__main__':
     file_path = os.path.join(os.path.abspath(".."), "data", "school_module.yaml")
     handYaml = HandleYaml(file_path)
-    a = handYaml.get_data("user_manage")
+    a = handYaml.get_data("school_manage")
     print(a)
     print(type(a))

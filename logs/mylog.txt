@@ -1,1 +1,6 @@
-[2021-12-13 17:24:08] [INFO] --------------用户模块测试结束-----------------
+[2021-12-27 14:26:11] [INFO] 创建学校失败，原因是Message: element click intercepted: Element <input placeholder="选择城市" type="text" readonly="" id="address" autocomplete="off" class="ant-input ant-cascader-input"> is not clickable at point (743, 296). Other element would receive the click: ...<span class="ant-cascader-picker-label"></span>
+  (Session info: chrome=96.0.4664.110)
+
+[2021-12-27 14:26:14] [INFO] --------------学校模块测试结束-----------------
+[2021-12-27 14:26:14] [INFO] ------------开始测试学校模块----------------
+[2021-12-27 14:26:31] [INFO] --------------用户模块测试结束-----------------
